@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Welcome";
+}
+
+<style>
+    table, tr, td, th {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 10px;
+    }
+</style>
+<h2>Welcome to Sibeesh Passion's Email List</h2>
+<body data-ng-app="APIModule">
+
+    
+    <div id="tblSubs" ng-controller="testController">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Email ID</th>
+                <th>Subscribed Date</th>
+            </tr>
+            <tbody data-ng-repeat="can in candidates">
+                <tr>
+                    <td>{{can.firstName}}</td>
+                    <td>{{can.surname}}</td>
+                    <td>{{can.DOB}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+<script src="~/Scripts/angular.js"></script>
+<script src="~/Scripts/angular-route.js"></script>
+<script src="~/Scripts/APIScripts/Module.js"></script>
+<script src="~/Scripts/APIScripts/Service.js"></script>
+<script src="~/Scripts/APIScripts/Controller.js"></script>
